@@ -1,7 +1,9 @@
+import SmartWAtch from "./components/SmartWatch"
+
 function App() {
   return (
-    <div lang="fa" dir="rtl" className="App">
-      <h2 className="bg-slate-200 flex justify-center">Amirhossein</h2>
+    <div lang="fa" dir="rtl" className="App bg-slate-300 h-screen">
+      <SmartWAtch />
     </div>
   )
 }
