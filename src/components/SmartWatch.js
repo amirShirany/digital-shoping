@@ -2,7 +2,7 @@ const SmartWAtch = () => {
   return (
     <div>
       {/* app bar */}
-      <div className="flex justify-between items-center pt-10 px-4 mb-4">
+      <div className="md:hidden flex justify-between items-center pt-10 px-4 mb-4">
         <div>Digitize</div>
         <div className="text-xl font-bold text-slate-800">ساعت هوشمند</div>
         <div>
@@ -23,8 +23,8 @@ const SmartWAtch = () => {
         </div>
       </div>
       {/* filter - sort mobile section */}
-      <div className="flex justify-between items-center px-4 gap-x-4">
-        <div className="flex items-center justify-start bg-gray-100 rounded py-2 w-full">
+      <div className="md:hidden flex justify-between items-center px-4 gap-x-4 mb-8">
+        <div className="flex items-center justify-start bg-gray-100 rounded py-1 w-full">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const SmartWAtch = () => {
           </div>
           <span className="text-sm text-slate-800 mr-2">محبوب ترین</span>
         </div>
-        <div className="flex items-center justify-start bg-gray-100 rounded py-2 w-full">
+        <div className="flex items-center justify-start bg-gray-100 rounded py-1 w-full">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +60,38 @@ const SmartWAtch = () => {
           </div>
           <span className="text-sm text-slate-800 mr-2"> فیلتر : برند اپل</span>
         </div>
+      </div>
+      {/* product section */}
+      <div className="mx-4 gap-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="bg-white rounded-lg p-2 shadow-md">
+          <div className="flex justify-center px-1 mb-5">image</div>
+
+          <div className="flex justify-between items-center w-full mb-3">
+            <p className="text-slate-400 text-xs">اپل</p>
+            <span>icon circles</span>
+          </div>
+
+          <div className="text-slate-800 text-xs font-bold mb-2">
+            ساعت هوشمند اپل سری6
+          </div>
+
+          <div className="text-orange-600 text-center text-sm mb-3">
+            48,250,000 تومان
+          </div>
+          <hr />
+
+          <button className="text-red-500 text-xs font-bold w-full py-1">
+            مشاهده و سفارش
+          </button>
+        </div>
+
+        <div className="bg-blue-400">2</div>
+        <div className="bg-blue-400">3</div>
+        <div className="bg-blue-400">4</div>
+        <div className="bg-blue-400">5</div>
+        <div className="bg-blue-400">6</div>
+        <div className="bg-blue-400">7</div>
+        <div className="bg-blue-400">8</div>
       </div>
     </div>
   )
