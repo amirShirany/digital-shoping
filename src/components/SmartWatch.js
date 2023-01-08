@@ -1,4 +1,9 @@
+import { useState } from "react"
+import appleWatchS7 from "../image/apple-watch-7.png"
+
 const SmartWAtch = () => {
+  const [color, setColor] = useState("red")
+
   return (
     <div>
       {/* app bar */}
@@ -64,23 +69,98 @@ const SmartWAtch = () => {
       {/* product section */}
       <div className="mx-4 gap-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div className="bg-white rounded-lg p-2 shadow-md">
-          <div className="flex justify-center px-1 mb-5">image</div>
-
-          <div className="flex justify-between items-center w-full mb-3">
-            <p className="text-slate-400 text-xs">اپل</p>
-            <span>icon circles</span>
+          <div className="mb-2 bg-gray-100 rounded-xl p-2">
+            <img src={appleWatchS7} alt="" />
           </div>
 
-          <div className="text-slate-800 text-xs font-bold mb-2">
+          <div className="flex justify-between items-center w-full mb-3">
+            <p className="text-slate-400 text-xs md:text-base">اپل</p>
+
+            <div className="flex items-center">
+              <button
+                onClick={() => setColor("red")}
+                className={`bg-red-500 w-6 h-6 sm:w-8 sm:h-8 -ml-1 rounded-full cursor-pointer flex items-center justify-center ${
+                  color === "red" ? "ring-2 ring-red-400 ring-offset-1" : ""
+                }`}
+              >
+                {color === "red" && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    class="w-4 h-4 sm:w-6 sm:h-6 items-center justify-center stroke-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+                )}
+              </button>
+              <button
+                onClick={() => setColor("blue")}
+                className={`bg-blue-500 w-6 h-6 sm:w-8 sm:h-8 -ml-1 rounded-full cursor-pointer flex items-center justify-center ${
+                  color === "blue" ? "ring-2 ring-blue-400 ring-offset-1" : ""
+                }`}
+              >
+                {color === "blue" ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    class="w-4 h-4 sm:w-6 sm:h-6 items-center justify-center stroke-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+                ) : (
+                  ""
+                )}
+              </button>
+              <button
+                onClick={() => setColor("green")}
+                className={`bg-green-500 w-6 h-6 sm:w-8 sm:h-8 rounded-full cursor-pointer flex items-center justify-center ${
+                  color === "green" ? "ring-2 ring-green-400 ring-offset-1" : ""
+                }`}
+              >
+                {color === "green" ? (
+                  <svg
+                    x-show="color = green"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    class="w-4 h-4 sm:w-6 sm:h-6 items-center justify-center stroke-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 12.75l6 6 9-13.5"
+                    />
+                  </svg>
+                ) : (
+                  ""
+                )}
+              </button>
+            </div>
+          </div>
+
+          <div className="text-slate-800 text-xs font-bold mb-2 md:text-base">
             ساعت هوشمند اپل سری6
           </div>
 
           <div className="text-orange-600 text-center text-sm mb-3">
-            48,250,000 تومان
+            ۱۲,۳۵۴,۸۹۰ تومان
           </div>
           <hr />
 
-          <button className="text-red-500 text-xs font-bold w-full py-1">
+          <button className="text-red-500 text-xs font-bold w-full py-1 md:text-lg">
             مشاهده و سفارش
           </button>
         </div>
