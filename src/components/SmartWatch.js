@@ -1,14 +1,41 @@
-import Accordion from "@mui/material/Accordion"
-import AccordionSummary from "@mui/material/AccordionSummary"
-import AccordionDetails from "@mui/material/AccordionDetails"
-import Typography from "@mui/material/Typography"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-import FormControlLabel from "@mui/material/FormControlLabel"
-import Checkbox from "@mui/material/Checkbox"
-import { createTheme, ThemeProvider } from "@mui/material/styles"
-
 import { useState } from "react"
+import {
+  Accordion,
+  InputBase,
+  Checkbox,
+  Typography,
+  FormControlLabel,
+  AccordionDetails,
+  AccordionSummary,
+} from "@mui/material"
+import { createTheme, ThemeProvider, styled, alpha } from "@mui/material/styles"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import SearchIcon from "@mui/icons-material/Search"
 import appleWatchS7 from "../image/apple-watch-7.png"
+
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
+  display: "flex",
+  alignItems: "center",
+  marginRight: 5,
+  [theme.breakpoints.up("sm")]: {
+    marginLeft: theme.spacing(40),
+    width: "95%",
+  },
+}))
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  display: "flex",
+  color: "#222F5D",
+  "& .MuiInputBase-input": {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    [theme.breakpoints.up("sm")]: {
+      width: "auto",
+      focus: "outline-none bg-transparent",
+    },
+  },
+}))
 
 const theme = createTheme({
   palette: {
@@ -59,7 +86,7 @@ const SmartWAtch = () => {
       <ThemeProvider theme={theme}>
         {/* desktop navbar */}
         <nav className="bg-white p-4 shadow-lg flex sticky top-0 items-center justify-between z-10">
-          <ul className="flex items-center gap-x-4 text-slate-800 text-lg">
+          <ul className="flex items-center gap-x-2 text-slate-800 text-lg">
             <li>
               <a href="#" className="hover:bg-slate-100 rounded">
                 <svg
@@ -113,7 +140,16 @@ const SmartWAtch = () => {
               </a>
             </li>
           </ul>
-          <div>Search bar</div>
+          {/* Search bar */}
+          <div className="bg-gray-100 flex-1 rounded-lg hover:bg-slate-200 max-w-xl">
+            <Search>
+              <SearchIcon />
+              <StyledInputBase
+                placeholder="نام محصول،نام برند،مدل و..."
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
+          </div>
         </nav>
         {/* app bar */}
         <div className="md:hidden flex justify-between items-center pt-10 px-4 mb-4">
