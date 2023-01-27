@@ -215,7 +215,7 @@ const SmartWAtch = () => {
         <div className="container mx-auto max-w-screen-2xl grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-8 md:px-4 lg:px-6">
           {/* side bar */}
           <div className="hidden md:block col-span-4 lg:col-span-3 row-span-2 m-4">
-            <div className="bg-white p-5 rounded-xl">
+            <div className="bg-white p-5 rounded-xl max-h-[calc(100vh_-_100px)] overflow-auto sticky top-28">
               {/* Categoreis */}
               <div className="text-xl font-bold mb-5 text-orange-400">
                 دسته بندی
@@ -493,10 +493,23 @@ const SmartWAtch = () => {
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Suspendisse malesuada lacus ex, sit amet blandit leo
-                      lobortis eget.
+                    <Typography className="flex flex-col">
+                      <FormControlLabel
+                        control={<Checkbox color="checkboxColor" />}
+                        label="آبی"
+                      />
+                      <FormControlLabel
+                        control={<Checkbox color="checkboxColor" />}
+                        label="قرمز"
+                      />
+                      <FormControlLabel
+                        control={<Checkbox color="checkboxColor" />}
+                        label="سبز"
+                      />
+                      <FormControlLabel
+                        control={<Checkbox color="checkboxColor" />}
+                        label="مشکی"
+                      />
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
