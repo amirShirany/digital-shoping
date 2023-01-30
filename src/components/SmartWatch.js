@@ -766,7 +766,7 @@ const SmartWAtch = () => {
           </div>
         </div>
         {/* bottom navigation */}
-        <div className="bg-white md:hidden w-full overflow-hidden mt-5 bottom-0 right-0 left-0 rounded-tr-lg rounded-tl-lg shadow-xl">
+        <div className="bg-white md:hidden w-full overflow-hidden mt-5 bottom-0 right-0 left-0 rounded-tr-lg rounded-tl-lg shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)]">
           <BottomNavigation
             showLabels
             sx={{
