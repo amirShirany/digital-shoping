@@ -1,7 +1,12 @@
+import { useState } from "react"
+import iphone13 from "../image/iphone_13.png"
+
 const SingleProduct = () => {
+  const [color, setColor] = useState("red")
+
   return (
     <div>
-      {/* header */}
+      {/* app bar */}
       <div className="md:hidden flex justify-between items-center pt-10 px-4 mb-4">
         <div>
           <svg
@@ -117,7 +122,7 @@ const SingleProduct = () => {
         </div>
       </div>
 
-      {/* bread menu */}
+      {/* breadCrumbs */}
       <div className="flex items-center gap-2 mr-5">
         <span className="text-orange-400">تلفن همراه</span>
         <span>
@@ -148,6 +153,97 @@ const SingleProduct = () => {
           </svg>
         </span>
         <span>آیفون ۱۳</span>
+      </div>
+
+      {/* single product */}
+      <div className="px-4 flex flex-col items-center gap-y-9 mt-4">
+        <div className="w-4/5 max-w-xs">
+          <img className="w-full h-auto" src={iphone13} alt="fireSpot"></img>
+        </div>
+        <div className="mb-2 text-center">
+          <h1 className="text-slate-800 font-bold text-lg mb-1">
+            گوشی آیفون 13 128 گیگ
+          </h1>
+          <h2 className="font-thin text-gray-500">Apple Iphone 13 128 GB</h2>
+        </div>
+
+        {/* color selection */}
+        <div className="flex justify-evenly gap-x-8 w-full">
+          <span className="text-slate-800">انتخاب رنگ:</span>
+          <div className="flex items-center">
+            <button
+              onClick={() => setColor("red")}
+              className={`bg-red-500 w-7 h-7 sm:w-8 sm:h-8 -ml-1 rounded-full cursor-pointer flex items-center justify-center ${
+                color === "red" ? "ring-2 ring-red-400 ring-offset-1" : ""
+              }`}
+            >
+              {color === "red" && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  class="w-5 h-5 sm:w-6 sm:h-6 items-center justify-center stroke-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+              )}
+            </button>
+            <button
+              onClick={() => setColor("blue")}
+              className={`bg-blue-500 w-7 h-7 sm:w-8 sm:h-8 -ml-1 rounded-full cursor-pointer flex items-center justify-center ${
+                color === "blue" ? "ring-2 ring-blue-400 ring-offset-1" : ""
+              }`}
+            >
+              {color === "blue" ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  class="w-5 h-5 sm:w-6 sm:h-6 items-center justify-center stroke-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+              ) : (
+                ""
+              )}
+            </button>
+            <button
+              onClick={() => setColor("green")}
+              className={`bg-green-500 w-7 h-7 sm:w-8 sm:h-8 rounded-full cursor-pointer flex items-center justify-center ${
+                color === "green" ? "ring-2 ring-green-400 ring-offset-1" : ""
+              }`}
+            >
+              {color === "green" ? (
+                <svg
+                  x-show="color = green"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  class="w-5 h-5 sm:w-6 sm:h-6 items-center justify-center stroke-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12.75l6 6 9-13.5"
+                  />
+                </svg>
+              ) : (
+                ""
+              )}
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )

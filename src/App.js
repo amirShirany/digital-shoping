@@ -1,5 +1,4 @@
 // import SmartWAtch from "./components/SmartWatch"
-
 import SingleProduct from "./components/SingleProduct"
 
 function App() {
