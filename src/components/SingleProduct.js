@@ -735,8 +735,172 @@ const SingleProduct = () => {
                 </div>
               </div>
 
-              {/* seller detail */}
-              <div className="hidden lg:block w-1/4 bg-red-200 mr-4 rounded-lg h-80"></div>
+              {/* cart summery detail */}
+              <div className="hidden lg:block w-1/4 mr-4">
+                <div className="bg-gray-50 text-slate-800 h-auto rounded-lg text-xs md:text-base p-3 mt-6 flex flex-col gap-y-4">
+                  <div className="flex flex-col xl:flex-row">
+                    <div className="flex items-center">
+                      <span>
+                        <svg
+                          width="20"
+                          height="19"
+                          viewBox="0 0 20 19"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="12" cy="8" r="8" fill="#E2E2E2" />
+                          <path
+                            d="M1.75586 11.5449V14.1641C1.75586 16.7833 2.80586 17.8333 5.42503 17.8333H8.56919C11.1884 17.8333 12.2384 16.7833 12.2384 14.1641V11.5449"
+                            stroke="#222F5D"
+                            strokeWidth="0.875"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M7.00012 11.9993C8.06762 11.9993 8.85512 11.1302 8.75012 10.0627L8.36512 6.16602H5.64095L5.25012 10.0627C5.14512 11.1302 5.93262 11.9993 7.00012 11.9993Z"
+                            stroke="#222F5D"
+                            strokeWidth="0.875"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M10.681 11.9993C11.8593 11.9993 12.7226 11.0427 12.606 9.87018L12.4426 8.26602C12.2326 6.74935 11.6493 6.16602 10.121 6.16602H8.3418L8.75013 10.2552C8.8493 11.2177 9.71846 11.9993 10.681 11.9993Z"
+                            stroke="#222F5D"
+                            strokeWidth="0.875"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M3.29005 11.9993C4.25255 11.9993 5.12172 11.2177 5.21505 10.2552L5.34339 8.96602L5.62339 6.16602H3.84422C2.31589 6.16602 1.73255 6.74935 1.52255 8.26602L1.36505 9.87018C1.24839 11.0427 2.11172 11.9993 3.29005 11.9993Z"
+                            stroke="#222F5D"
+                            strokeWidth="0.875"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M7.00008 14.916C6.02591 14.916 5.54175 15.4002 5.54175 16.3743V17.8327H8.45841V16.3743C8.45841 15.4002 7.97425 14.916 7.00008 14.916Z"
+                            stroke="#222F5D"
+                            strokeWidth="0.875"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span className="font-medium mr-1">فروشنده:</span>
+                    </div>
+                    <span className="font-light text-gray-600 mr-2">
+                      دیجی تایز
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col xl:flex-row">
+                    <div className="flex items-center">
+                      <span>
+                        <svg
+                          width="21"
+                          height="19"
+                          viewBox="0 0 21 19"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="13" cy="8" r="8" fill="#E2E2E2" />
+                          <path
+                            d="M7.43053 3.57973L3.89594 4.91139C3.08136 5.21598 2.41553 6.17931 2.41553 7.04348V12.3064C2.41553 13.1422 2.96803 14.2401 3.64094 14.7431L6.68678 17.0168C7.68553 17.7676 9.32886 17.7676 10.3276 17.0168L13.3734 14.7431C14.0464 14.2401 14.5989 13.1422 14.5989 12.3064V7.04348C14.5989 6.17223 13.933 5.20889 13.1184 4.90431L9.58386 3.57973C8.98178 3.36014 8.01844 3.36014 7.43053 3.57973Z"
+                            stroke="#222F5D"
+                            strokeWidth="1.0625"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span className="font-medium mr-1">گارانتی:</span>
+                    </div>
+                    <span className="font-light text-gray-600 mr-2">
+                      18ماه زرین خدمت
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col xl:flex-row">
+                    <div className="flex items-center">
+                      <span>
+                        <svg
+                          width="20"
+                          height="21"
+                          viewBox="0 0 20 21"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="12" cy="8" r="8" fill="#E2E2E2" />
+                          <path
+                            d="M9.99992 6.33301V12.9997C9.99992 13.733 9.39992 14.333 8.66659 14.333H1.33325V10.0797C1.81992 10.6597 2.5666 11.0197 3.39327 10.9997C4.0666 10.9863 4.67325 10.7263 5.12659 10.293C5.33325 10.1197 5.5066 9.89967 5.63993 9.65967C5.87993 9.253 6.01325 8.77299 5.99992 8.27299C5.97992 7.49299 5.63326 6.80634 5.09326 6.33301H9.99992Z"
+                            stroke="#222F5D"
+                            strokeWidth="1.125"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M14.6666 14.333V16.333C14.6666 17.4397 13.7733 18.333 12.6666 18.333H11.9999C11.9999 17.5997 11.3999 16.9997 10.6666 16.9997C9.93325 16.9997 9.33325 17.5997 9.33325 18.333H6.66659C6.66659 17.5997 6.06659 16.9997 5.33325 16.9997C4.59992 16.9997 3.99992 17.5997 3.99992 18.333H3.33325C2.22659 18.333 1.33325 17.4397 1.33325 16.333V14.333H8.66659C9.39992 14.333 9.99992 13.733 9.99992 12.9997V8.33301H11.2266C11.7066 8.33301 12.1466 8.59301 12.3866 9.00635L13.5266 10.9997H12.6666C12.2999 10.9997 11.9999 11.2997 11.9999 11.6663V13.6663C11.9999 14.033 12.2999 14.333 12.6666 14.333H14.6666Z"
+                            stroke="#222F5D"
+                            strokeWidth="1.125"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M5.33333 19.6667C6.06971 19.6667 6.66667 19.0697 6.66667 18.3333C6.66667 17.597 6.06971 17 5.33333 17C4.59695 17 4 17.597 4 18.3333C4 19.0697 4.59695 19.6667 5.33333 19.6667Z"
+                            stroke="#222F5D"
+                            strokeWidth="1.125"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M10.6666 19.6667C11.403 19.6667 11.9999 19.0697 11.9999 18.3333C11.9999 17.597 11.403 17 10.6666 17C9.93021 17 9.33325 17.597 9.33325 18.3333C9.33325 19.0697 9.93021 19.6667 10.6666 19.6667Z"
+                            stroke="#222F5D"
+                            strokeWidth="1.125"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M14.6667 13V14.3333H12.6667C12.3 14.3333 12 14.0333 12 13.6667V11.6667C12 11.3 12.3 11 12.6667 11H13.5267L14.6667 13Z"
+                            stroke="#222F5D"
+                            strokeWidth="1.125"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M6.00008 8.33268C6.00008 9.13268 5.64676 9.84602 5.09342 10.3327C4.62009 10.746 4.00675 10.9993 3.33341 10.9993C1.86008 10.9993 0.666748 9.80602 0.666748 8.33268C0.666748 7.49268 1.05341 6.73935 1.66675 6.25269C2.12675 5.88602 2.70675 5.66602 3.33341 5.66602C4.80675 5.66602 6.00008 6.85935 6.00008 8.33268Z"
+                            stroke="#222F5D"
+                            strokeWidth="1.125"
+                            strokeMiterlimit="10"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M3.50008 7.49902V8.49902L2.66675 8.99902"
+                            stroke="#222F5D"
+                            strokeWidth="1.125"
+                            strokeMiterlimit="10"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <span className="font-medium mr-1">ارسال توسط:</span>
+                    </div>
+                    <span className="font-light text-gray-600 mr-2">
+                      انبار تهران
+                    </span>
+                  </div>
+
+                  <div className="mt-8">
+                    <span className="flex justify-center text-orange-500 font-bold text-xl mb-4">
+                      39,850,000 تومان
+                    </span>
+                    <button className="text-white bg-orange-500 xl:text-xl rounded-lg w-full py-3">
+                      اضافه به سبد خرید
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
