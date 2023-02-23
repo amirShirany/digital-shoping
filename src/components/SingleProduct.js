@@ -453,6 +453,17 @@ const SingleProduct = () => {
                       src={iphone13}
                       alt="fireSpot"
                     ></img>
+                    <div className="hidden md:flex items-center justify-around gap-x-2 mt-2">
+                      <div className="border rounded-lg p-2 border-gray-400">
+                        <img className="w-full h-auto" src={iphone13} alt="" />
+                      </div>
+                      <div className="border rounded-lg p-2 border-gray-400">
+                        <img className="w-full h-auto" src={iphone13} alt="" />
+                      </div>
+                      <div className="border rounded-lg p-2 border-gray-400">
+                        <img className="w-full h-auto" src={iphone13} alt="" />
+                      </div>
+                    </div>
                   </div>
 
                   <div className="flex flex-col">
@@ -706,7 +717,7 @@ const SingleProduct = () => {
                       </div>
                     </div>
                     {/* product detail */}
-                    <div className="text-slate-700 font-bold bg-white rounded-lg w-full p-6 md:bg-none md:p-0">
+                    <div className="text-slate-700 font-bold bg-white rounded-lg w-full p-6 mr-2 md:bg-none md:p-0">
                       <h2 className="mb-2 mt-4 font-black text-base md:text-xl">
                         ویژگی های کالا:
                       </h2>
