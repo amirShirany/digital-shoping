@@ -748,7 +748,7 @@ const SingleProduct = () => {
 
               {/* cart summery detail */}
               <div className="hidden lg:block w-1/4 mr-4">
-                <div className="bg-gray-50 text-slate-800 h-auto rounded-lg text-xs md:text-base p-3 mt-6 flex flex-col gap-y-4">
+                <div className="bg-gray-50 text-slate-800 h-auto rounded-lg text-xs md:text-sm p-3 mt-6 flex flex-col gap-y-4">
                   <div className="flex flex-col xl:flex-row">
                     <div className="flex items-center">
                       <span>
@@ -913,6 +913,17 @@ const SingleProduct = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* fixed add to cart button */}
+        <div className="md:hidden fixed flex items-center justify-between left-0 right-0 bottom-0 w-full bg-white shadow-lg px-4 py-2 mt-10 gap-x-4">
+          <button className="flex-auto text-white bg-orange-500 xl:text-xl rounded-lg w-full py-3">
+            اضافه به سبد خرید
+          </button>
+          <div className="text-slate-800 flex flex-col mr-2">
+            <span>38,560,000</span>
+            <span className="text-gray-500 text-sm">تومان</span>
           </div>
         </div>
       </ThemeProvider>
