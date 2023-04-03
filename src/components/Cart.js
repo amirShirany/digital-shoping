@@ -1,4 +1,9 @@
+import { useState } from "react"
+import appleWatchS6 from "../image/apple-watch-6.svg"
+
 const Cart = () => {
+  const [OrderNumber, setOrderNumber] = useState(1)
+
   return (
     <div className="h-screen bg-slate-300">
       {/* app bar */}
@@ -114,9 +119,83 @@ const Cart = () => {
           </svg>
         </div>
       </div>
-      {/* cart summery */}
+
+      {/* cart items */}
       <div className="flex flex-col gap-y-4 px-4">
-        <div className="bg-white rounded-lg p-4"></div>
+        <div className="bg-white flex rounded-lg p-4 items-stretch justify-between">
+          <div className="w-1/5 h-auto">
+            <img className="w-full h-auto" src={appleWatchS6} alt=""></img>
+          </div>
+
+          <div className="flex flex-col justify-between">
+            <p className="text-sm">ساعت هوشمند اپل سری 6</p>
+            <p className="text-orange-600">2,250,000 تومان</p>
+          </div>
+
+          <div className="flex flex-col justify-between items-end">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5 stroke-orange-700"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+
+            <div className="flex items-center gap-x-1">
+              <span
+                className="flex items-center justify-center bg-gray-200 rounded-full cursor-pointer w-6 h-6"
+                onClick={() => setOrderNumber(OrderNumber + 1)}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v12m6-6H6"
+                  />
+                </svg>
+              </span>
+              <span className="flex items-center justify-center border border-collapse border-orange-500 rounded-sm w-5 h-8 text-xs">
+                {OrderNumber}
+              </span>
+              <span
+                className="flex items-center justify-center bg-orange-200 rounded-full cursor-pointer w-6 h-6"
+                onClick={() =>
+                  OrderNumber > 1 && setOrderNumber(OrderNumber - 1)
+                }
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1"
+                  stroke="currentColor"
+                  class="w-6 h-6 stroke-orange-500"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M18 12H6"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
